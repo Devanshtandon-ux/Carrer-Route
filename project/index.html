@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CareerRoute</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>🎓CareerRoute</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#career">Career Analyzer</a>
+      <a href="#courses">Courses</a>  
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Discover the Best Career Based on Your Passion</h2>
+      <p>Tell us what you love doing — we will suggest a path, explain why it fits, and provide free courses you can
+        apply to right away.</p>
+      <a href="#career" class="btn">Start Analysis</a>
+    </div>
+  </section>
+
+  <section id="career" class="section">
+    <h2>🧠 Smart Career Analyzer</h2>
+
+    <form id="careerForm">
+      <label>Your Name</label>
+      <input type="text" id="name" placeholder="Your name" />
+
+      <label>Your Current Study (optional)</label>
+      <select id="study">
+        <option value="">-- Select (optional) --</option>
+        <option value="BCA">BCA / Computer Science</option>
+        <option value="BTech">B.Tech (Engineering)</option>
+        <option value="BCom">B.Com / Commerce</option>
+        <option value="BA">B.A / Arts</option>
+        <option value="BSc">B.Sc / Science</option>
+        <option value="BBA">BBA / marketing</option>
+      </select>
+
+      <label>Type your interests or what you enjoy (e.g., "digital marketing", "coding")</label>
+      <input type="text" id="interestText" placeholder="" required />
+
+      <button type="submit" class="btn">Analyze & Suggest</button>
+    </form>
+
+    <div class="result" id="result" aria-live="polite">
+      <div id="aiBox"></div>
+      <canvas id="chart" style="max-width:700px;margin:18px auto;display:block;"></canvas>
+      <div id="coursesList" class="courses-list"></div>
+    </div>
+  </section>
+
+ <section id="courses" class="section">
+  <h2>📚 Other Popular Platforms</h2>
+  <div class="card-container">
+
+    <div class="course-card">
+      <img src="../images/coursera (1).png" alt="Coursera" class="card-img">
+      <h3>Coursera</h3>
+      <p>University-level courses & professional certificates.</p>
+      <a href="https://www.coursera.org" target="_blank" class="btn-small">Visit</a>
+    </div>
+
+    <div class="course-card">
+      <img src="../images/FreeCodeCamp-logo-01.png" alt="freeCodeCamp" class="card-img">
+      <h3>freeCodeCamp</h3>
+      <p>Hands-on coding projects and certifications.</p>
+      <a href="https://www.freecodecamp.org" target="_blank" class="btn-small">Visit</a>
+    </div>
+
+    <div class="course-card">
+      <img src="../images/e.png" alt="edX" class="card-img">
+      <h3>edX</h3>
+      <p>Courses from top universities worldwide.</p>
+      <a href="https://www.edx.org" target="_blank" class="btn-small">Visit</a>
+    </div>
+
+  </div>
+</section>
+
+  <footer>
+    <p>© 2025 CareerRoute  </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

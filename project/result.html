@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Career Result</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Free Education Adviser</div>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="#">Courses</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
+<section class="container">
+
+  <div id="aiBox" class="ai-card"></div>
+
+  <canvas id="chart" width="300" height="120"></canvas>
+
+  <h2 style="margin-top:40px;">Recommended Courses</h2>
+  <div id="coursesList" class="courses-grid"></div>
+</section>
+
+<footer>© 2025 Free Education Adviser — Built by Devansh</footer>
+
+<script src="script.js"></script>
+<script>
+window.onload = function() {
+  const name = localStorage.getItem("name");
+  const study = localStorage.getItem("study");
+  const text = localStorage.getItem("text");
+
+  const match = findBestMatch(text);
+  renderSuggestion(name, study, match);
+  renderCourses(match);
+  renderChart();
+};
+</script>
+
+</body>
+</html>
